@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #43115B; /* Dark purple background */
+    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.top-nav {
+    color: #E2BE00;
+    position: absolute;
+    top: -10px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-tic {
+    color: #E2BE00;
+}
+.logo-tac {
+    color: #c4f0ff;
+}
+.logo-toe {
+    color: #48D2FE;
+}
+
+.highlight {
+    background-color: #00e660 !important;
+    transition: ease-in-out 0.3s;
+}
+
+.container {
+    background-color: #2B0040; /* Darker purple for the game container */
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score {
+    background-color: #48D2FE;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score .score-val {
+    font-size: 1.6rem;
+}
+
+#scoreDraw {
+    background-color: #ADD8E6; /* Light blue for Draw */
+}
+
+#scoreO {
+    background-color: #E2BE00; /* Yellow for O */
+}
+
+.board,
+.scoreboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #43115B;
+    /* border: 1px solid #000; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+}
+
+.cell.x {
+    color: #E2BE00;
+}
+.cell.o {
+    color: #48D2FE;
+}
+
+
+.cell.disabled {
+    pointer-events: none;
+}
+
+button {
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: #48D2FE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .container {
+        padding: 30px;
+    }
+
+    .score,
+    .cell {
+        width: 80px;
+        height: 80px;
+        padding: 2px;
+    }
+
+    .board,
+    .scoreboard {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        gap: 12px;
+        margin: 15px 0 ;
+    }
+
+    .top-nav {
+        top: 5px;
+        font-size: 1.8rem;
+    }
+}
